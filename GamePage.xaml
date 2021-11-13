@@ -1,0 +1,20 @@
+﻿<Page x:Class="Project_MISiS.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project_MISiS"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1200"
+      Title="GamePage"
+      Loaded="GamePage_OnLoaded">
+    <Page.Background>
+        <ImageBrush ImageSource="/background-image.jpg" Stretch="UniformToFill"/>
+    </Page.Background>
+    <Canvas Name="GameCanvas">
+        <TextBlock Name="HandDebugTextBlock" FontSize="30" Margin="940 10 0 0" 
+                   HorizontalAlignment="Right" TextAlignment="Right" Width="250"/>
+        <TextBlock Name="TrashDebugTextBlock" FontSize="30" Margin="940 100 0 0" 
+                   HorizontalAlignment="Right" TextAlignment="Right" Width="250"/>
+    </Canvas>
+</Page>
