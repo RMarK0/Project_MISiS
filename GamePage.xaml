@@ -11,10 +11,12 @@
     <Page.Background>
         <ImageBrush ImageSource="/background-image.jpg" Stretch="UniformToFill"/>
     </Page.Background>
-    <Canvas Name="GameCanvas">
-        <TextBlock Name="HandDebugTextBlock" FontSize="30" Margin="940 10 0 0" 
-                   HorizontalAlignment="Right" TextAlignment="Right" Width="250"/>
-        <TextBlock Name="TrashDebugTextBlock" FontSize="30" Margin="940 100 0 0" 
-                   HorizontalAlignment="Right" TextAlignment="Right" Width="250"/>
+    <Canvas Name="GameCanvas" >
+        <TextBlock Name="HandDebugTextBlock" FontSize="24" Margin="840 10 0 0" 
+                   HorizontalAlignment="Right" TextAlignment="Right" Width="350"/>
+        <TextBlock Name="TrashDebugTextBlock" FontSize="24" Margin="840 100 0 0" 
+                   HorizontalAlignment="Right" TextAlignment="Right" Width="350"/>
+        <TextBlock Name="ResultsTestBlock" FontSize="24" Margin="840 190 0 0"
+                   HorizontalAlignment="Right" TextAlignment="Right" Width="350"/>
     </Canvas>
 </Page>

@@ -25,7 +25,7 @@ namespace Project_MISiS.Model
 
     public static class TrashBinFactory
     {
-        private static readonly string ProjectUrl = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.FullName;
+        private static readonly string ProjectUrl = Directory.GetParent(Environment.CurrentDirectory).FullName;
 
         public static TrashBin CreateTrashBin(int binNumber)
         {
@@ -33,12 +33,16 @@ namespace Project_MISiS.Model
 
             Image icon = new Image
             {
-                Source = new BitmapImage(new Uri(ProjectUrl + $"\\Resources\\bin-{category}.png")),
+                Source = new BitmapImage(new Uri(ProjectUrl + $"/Resources/bin-{category}.png")),
                 Height = 150,
                 Width = 200,
-                Margin = new Thickness(binNumber * 200, 500, 0, 0)
+                Margin = new Thickness(binNumber * 200, 530, 0, 0)
             };
-            return new TrashBin(binNumber + 1, icon) { X = binNumber * 200, Y = 0 };
+            return new TrashBin(binNumber + 1, icon)
+            {
+                X = binNumber * 200 + 100,
+                Y = 20
+            };
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Project_MISiS.Model
     /// </summary>
     static class TrashFactory
     {
-        private static readonly string ProjectUrl = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.FullName;
+        private static readonly string ProjectUrl = Directory.GetParent(Environment.CurrentDirectory).FullName;
         // Путь к папке проекта
         public static TrashItem CreateTrashItem()
         {
@@ -40,7 +40,7 @@ namespace Project_MISiS.Model
             string category = CategoryTable.CategoryDictionary[categoryId];
             Image icon = new Image
             {
-                Source = new BitmapImage(new Uri(ProjectUrl + $"\\Resources\\icon-{category}-{rnd.Next(1, 3)}.png")),
+                Source = new BitmapImage(new Uri(ProjectUrl + $"/Resources/icon-{category}-{rnd.Next(1, 3)}.png")),
                 Height = 150,
                 Width = 150
             };

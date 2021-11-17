@@ -12,7 +12,7 @@
         <Image Name="GameLogo" Height="150" Width="600" Margin="0 0 0 450" />
         <Button Name="StartGameButton" Height="50" Width="300" Content="Start" Margin="0 100 0 150" FontSize="20" Click="StartGameButton_Click" />
         <Button Name="LeaderboardButton" Height="50" Width="300" Content="Leaderboard" Margin="0 100 0 0" FontSize="20" />
-        <Button Name="ExitButton" Height="50" Width="300" Content="Exit" Margin="0 250 0 0" FontSize="20" />
+        <Button Name="ExitButton" Height="50" Width="300" Content="Exit" Margin="0 250 0 0" FontSize="20" Click="ExitButton_OnClick"/>
         <TextBlock Name="DeveloperInfoTextBlock" Height="40" Width="600" Text="2021 © Dmitry Rybalko, Darya Mitkina"
                    TextAlignment="Center" FontSize="16" TextWrapping="Wrap" Margin="0 650 0 0" />
     </Grid>

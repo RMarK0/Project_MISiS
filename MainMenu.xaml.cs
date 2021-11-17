@@ -30,5 +30,10 @@ namespace Project_MISiS
             GamePage gamePage = new GamePage();
             if (_navigation != null) _navigation.Navigate(gamePage);
         }
+
+        private void ExitButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -7,12 +7,16 @@ namespace Project_MISiS.Model
     /// <summary>
     /// Класс, определяющий функционал и свойства объекта результата
     /// </summary>
-    class Result
+    public class Result
     {
-        private int Value { get; set; }
-        private int CategoryId { get; set; }
+        public int Value { get; set; }
+        public int CategoryId { get; set; }
 
-
+        public Result(int categoryId)
+        {
+            CategoryId = categoryId;
+            Value = 0;
+        }
 
     }
 }
