@@ -24,8 +24,8 @@ namespace Project_MISiS
 
         public Hand MainHand;
         public TrashItem ActiveTrashItem;
-        public TrashBin[] TrashBins = new TrashBin[6]; // создаем массив мусорок
-        public Result[] Results = new Result[6];
+        public TrashBin[] TrashBins = new TrashBin[5]; // создаем массив мусорок
+        public Result[] Results = new Result[5];
 
         private readonly TrashMovementSubject _trashMovementSubject;
         private readonly TrashMovementObserver _trashMovementObserver = new TrashMovementObserver();
@@ -83,9 +83,9 @@ namespace Project_MISiS
                 ActiveTrashItem = TrashFactory.CreateTrashItem();
                 ActiveTrashItem.Icon.HorizontalAlignment = HorizontalAlignment.Left;
                 ActiveTrashItem.Icon.VerticalAlignment = VerticalAlignment.Bottom;
-                ActiveTrashItem.Icon.Margin = new Thickness(100, 0, 0, 0);
-                ActiveTrashItem.X = 200;
-                ActiveTrashItem.Y = 600;
+                ActiveTrashItem.Icon.Margin = new Thickness(500, 550, 0, 0);
+                ActiveTrashItem.X = 600;
+                ActiveTrashItem.Y = 50;
 
                 GameCanvas.Children.Add(ActiveTrashItem.Icon);
             }

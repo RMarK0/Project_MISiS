@@ -36,11 +36,11 @@ namespace Project_MISiS.Model
         public static TrashItem CreateTrashItem()
         {
             Random rnd = new Random();
-            int categoryId = rnd.Next(1, 7);
+            int categoryId = rnd.Next(1, 6);
             string category = CategoryTable.CategoryDictionary[categoryId];
             Image icon = new Image
             {
-                Source = new BitmapImage(new Uri(ProjectUrl + $"/Resources/icon-{category}-{rnd.Next(1, 3)}.png")),
+                Source = new BitmapImage(new Uri(ProjectUrl + $"/Resources/icon-{category}-{rnd.Next(1, 5)}.png")),
                 Height = 150,
                 Width = 150
             };

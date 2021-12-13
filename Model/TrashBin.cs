@@ -36,12 +36,12 @@ namespace Project_MISiS.Model
                 Source = new BitmapImage(new Uri(ProjectUrl + $"/Resources/bin-{category}.png")),
                 Height = 150,
                 Width = 200,
-                Margin = new Thickness(binNumber * 200, 530, 0, 0)
+                Margin = new Thickness(binNumber * 200 + 85, 380, 0, 0)
             };
             return new TrashBin(binNumber + 1, icon)
             {
-                X = binNumber * 200 + 100,
-                Y = 20
+                X = binNumber * 200 + 185,
+                Y = 170
             };
         }
     }

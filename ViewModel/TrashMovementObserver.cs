@@ -25,6 +25,9 @@ namespace Project_MISiS.ViewModel
 
         private bool DetectCollision(TrashItem trash, TrashBin bin)
         {
+            if (trash.Y < bin.Y)
+                return false;
+
             RectangleF binRect = new RectangleF(bin.X, bin.Y, (float)bin.Icon.Width,
                 (float)bin.Icon.Height);
             RectangleF trashRect = new RectangleF(trash.X, trash.Y, (float)trash.Icon.Width,

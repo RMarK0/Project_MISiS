@@ -9,8 +9,9 @@
       Title="GamePage"
       Loaded="GamePage_OnLoaded">
     <Page.Background>
-        <ImageBrush ImageSource="/background-image.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="/background-image.png" Stretch="Fill"/>
     </Page.Background>
+
     <Canvas Name="GameCanvas" >
         <TextBlock Name="HandDebugTextBlock" FontSize="24" Margin="840 10 0 0" 
                    HorizontalAlignment="Right" TextAlignment="Right" Width="350"/>

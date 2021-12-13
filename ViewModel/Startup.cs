@@ -17,13 +17,13 @@ namespace Project_MISiS.ViewModel
             
             Panel.SetZIndex(page.MainHand.HandImage, 1);
 
-            for (int i = 0; i < 6; i++) // этот цикл отвечает за размещение мусорок
+            for (int i = 0; i < 5; i++) // этот цикл отвечает за размещение мусорок
             {
                 page.TrashBins[i] = TrashBinFactory.CreateTrashBin(i);
                 page.GameCanvas.Children.Add(page.TrashBins[i].Icon);
             }
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
                 page.Results[i] = new Result(i + 1);
             
         }

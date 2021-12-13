@@ -12,8 +12,7 @@ namespace Project_MISiS.Model
             {2, "plastic"},
             {3, "paper"},
             {4, "metal"},
-            {5, "other"},
-            {6, "bio"}
+            {5, "bio"}
         };
     }
 }
