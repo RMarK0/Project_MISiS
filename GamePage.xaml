@@ -14,10 +14,16 @@
 
     <Canvas Name="GameCanvas" >
         <TextBlock Name="HandDebugTextBlock" FontSize="24" Margin="840 10 0 0" 
-                   HorizontalAlignment="Right" TextAlignment="Right" Width="350"/>
+                   HorizontalAlignment="Right" TextAlignment="Right" Width="350" Visibility="Hidden"/>
         <TextBlock Name="TrashDebugTextBlock" FontSize="24" Margin="840 100 0 0" 
-                   HorizontalAlignment="Right" TextAlignment="Right" Width="350"/>
+                   HorizontalAlignment="Right" TextAlignment="Right" Width="350" Visibility="Hidden"/>
         <TextBlock Name="ResultsTestBlock" FontSize="24" Margin="840 190 0 0"
-                   HorizontalAlignment="Right" TextAlignment="Right" Width="350"/>
+                   HorizontalAlignment="Right" TextAlignment="Right" Width="350" Visibility="Hidden"/>
+        <TextBlock Name="ResultsTextBlock" FontSize="60" Margin="535 50 0 0" Width="100" Height="100"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Hey Haters" TextAlignment="Center"/>
+        <TextBlock Name="TimerTextBlock" FontSize="60" Margin="0 0 0 0" Width="300" Height="100"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Hey Haters" TextAlignment="Left"/>
+
+        
     </Canvas>
 </Page>

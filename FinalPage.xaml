@@ -1,0 +1,28 @@
+﻿<Page x:Class="Project_MISiS.FinalPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project_MISiS"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1200"
+      Title="FinalPage">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/магазин детских игрушек (1).png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <TextBlock Name="ResultTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center"
+                   Margin="0 330 15 0" Height="135" Width="250" FontSize="80" FontFamily="Hey Haters" TextAlignment="Center"/>
+        <Image Source="Медаль.png" Margin="38,166,829,352" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-20.311"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Page>

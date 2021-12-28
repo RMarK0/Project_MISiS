@@ -1,0 +1,18 @@
+﻿<Page x:Class="Project_MISiS.HelpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project_MISiS"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1200"
+      Title="HelpPage">
+
+    <Grid Background="White">
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Width="500" FontSize="32"
+                   Text="Окно справки" TextAlignment="Center" Margin="0,32,0,0"/>
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,80,0,0" Width="1000" Height="504"
+                   TextWrapping="Wrap" Name="MainTextBlock" FontSize="20"/>
+        <Button Width="150" Height="30" Name="BackButton" FontSize="14" Content="В главное меню" Margin="100,45,950,645" Click="BackButton_OnClick" />
+    </Grid>
+</Page>

@@ -9,10 +9,12 @@
       Title="MainMenuPage">
 
     <Grid Name="MenuGrid" Background="White">
-        <Image Name="GameLogo" Height="150" Width="600" Margin="0 0 0 450" />
-        <Button Name="StartGameButton" Height="50" Width="300" Content="Start" Margin="0 100 0 150" FontSize="20" Click="StartGameButton_Click" />
-        <Button Name="LeaderboardButton" Height="50" Width="300" Content="Leaderboard" Margin="0 100 0 0" FontSize="20" />
-        <Button Name="ExitButton" Height="50" Width="300" Content="Exit" Margin="0 250 0 0" FontSize="20" Click="ExitButton_OnClick"/>
+        <Image Name="GameLogo" Height="150" Width="600" Margin="0 0 0 450" Visibility="Hidden"/>
+        <TextBlock Name="PlaceholderLogoTextBlock" Height="100" Width="600" Margin="0 0 0 420" 
+                   Text="ECO PROJECT" TextAlignment="Center" FontFamily="Hey Haters" FontSize="90"/>
+        <Button Name="StartGameButton" Height="50" Width="300" Content="Начать игру" Margin="0 100 0 150" FontSize="20" Click="StartGameButton_Click" />
+        <Button Name="HelpButton" Height="50" Width="300" Content="Помощь" Margin="0 100 0 0" FontSize="20" Click="HelpButton_OnClick"/>
+        <Button Name="ExitButton" Height="50" Width="300" Content="Выход" Margin="0 250 0 0" FontSize="20" Click="ExitButton_OnClick"/>
         <TextBlock Name="DeveloperInfoTextBlock" Height="40" Width="600" Text="2021 © Dmitry Rybalko, Darya Mitkina"
                    TextAlignment="Center" FontSize="16" TextWrapping="Wrap" Margin="0 650 0 0" />
     </Grid>

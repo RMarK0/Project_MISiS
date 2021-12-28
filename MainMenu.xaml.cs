@@ -22,6 +22,7 @@ namespace Project_MISiS
         public MainMenuPage()
         {
             InitializeComponent();
+
         }
 
         private void StartGameButton_Click(object sender, RoutedEventArgs e)
@@ -34,6 +35,14 @@ namespace Project_MISiS
         private void ExitButton_OnClick(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void HelpButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            _navigation = NavigationService.GetNavigationService(this);
+            HelpPage helpPage = new HelpPage();
+            if (_navigation != null)
+                _navigation.Navigate(helpPage);
         }
     }
 }

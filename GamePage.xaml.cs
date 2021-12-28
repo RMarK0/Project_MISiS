@@ -21,6 +21,9 @@ namespace Project_MISiS
     public partial class GamePage : Page
     {
         private readonly DispatcherTimer _gameTickTimer = new DispatcherTimer();
+        private readonly DispatcherTimer _countdownTimer = new DispatcherTimer();
+
+        private int timeRemaining = 60;
 
         public Hand MainHand;
         public TrashItem ActiveTrashItem;
@@ -40,6 +43,7 @@ namespace Project_MISiS
         {
             InitializeComponent();
             Startup.Start(this);
+            UpdateScore();
 
             _trashMovementSubject = new TrashMovementSubject(this);
             _handMovementSubject = new HandMovementSubject(this);
@@ -58,10 +62,15 @@ namespace Project_MISiS
                 window.KeyDown += WindowOnKeyDown;
                 window.KeyUp += WindowOnKeyUp;
             }
+            TimerTextBlock.Text = $"Time: {timeRemaining}";
 
             _gameTickTimer.Tick += GameTickTimer_Tick;
             _gameTickTimer.Interval = TimeSpan.FromMilliseconds(5);
             _gameTickTimer.IsEnabled = true;
+
+            _countdownTimer.Tick += CountdownTimer_Tick;
+            _countdownTimer.Interval = TimeSpan.FromMilliseconds(1000);
+            _countdownTimer.IsEnabled = true;
         }
 
         // эти 4 переменные отвечают за движение по осям X и Y
@@ -69,6 +78,21 @@ namespace Project_MISiS
         private bool _moveLeft;
         private bool _moveUp;
         private bool _moveDown;
+
+        private void CountdownTimer_Tick(object sender, EventArgs e)
+        {
+            timeRemaining--;
+            if (timeRemaining < 1)
+            {
+                _countdownTimer.IsEnabled = false;
+                NavigationService _navigation = NavigationService.GetNavigationService(this);
+                FinalPage page = new FinalPage(Convert.ToInt32(ResultsTextBlock.Text));
+                if (_navigation != null) _navigation.Navigate(page);
+            }
+            TimerTextBlock.Text = $"Time: {timeRemaining}";
+            
+
+        }
 
         private void GameTickTimer_Tick(object sender, EventArgs e)
         {
@@ -132,7 +156,20 @@ namespace Project_MISiS
                 _moveDown = false;
 
             if (e.Key == Key.Enter && ActiveTrashItem != null) // обработка захвата мусора рукой
+            {
                 _trashMovementSubject.UpdateTrashMovement(MainHand.IsHoldingTrash, false);
+                UpdateScore();
+            }
+        }
+
+        private void UpdateScore()
+        {
+            int score = 0;
+
+            foreach (Result result in Results)
+                score += result.Value;
+
+            ResultsTextBlock.Text = score.ToString();
         }
     }
 }

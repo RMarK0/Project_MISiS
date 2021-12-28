@@ -9,11 +9,13 @@
   <ItemGroup>
     <None Remove="background-image.jpg" />
     <None Remove="background-image.png" />
+    <None Remove="магазин детских игрушек %281%29.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="background-image.jpg" />
     <Resource Include="background-image.png" />
+    <Resource Include="магазин детских игрушек (1).png" />
   </ItemGroup>
 
 </Project>

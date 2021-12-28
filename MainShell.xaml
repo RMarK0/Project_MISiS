@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_MISiS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1200" ResizeMode="CanMinimize">
+        Title="ECO PROJECT" Height="720" Width="1200" ResizeMode="CanMinimize">
     <Grid Name="MainGrid">
         <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="1"/>
     </Grid>
